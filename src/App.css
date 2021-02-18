@@ -1,0 +1,19 @@
+body {
+	font-family: "Museo Sans Rounded" !important;
+}
+.main-content {
+	background-image: url("./assets/offset_comp_572394.png");
+	background-repeat: no-repeat;
+	width: 19.532%;
+	height: 306px;
+}
+
+.mobile-container {
+	display: flex;
+	justify-content: center;
+}
+
+.logo {
+	display: flex;
+	padding: 24px 24px;
+}
