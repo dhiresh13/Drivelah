@@ -1,7 +1,8 @@
 :root {
-	--primary-color: #026786;
-	--secondary-color: ##ffcd05;
-	--ternary--color: #00a3ad;
+	--dark-green-color: #026786;
+	--yellow-color: #ffcd05;
+	--light-green--color: #00a3ad;
+	--grey-color: #b2b2b2;
 }
 
 * {
@@ -19,8 +20,11 @@ body {
 	background-image: url("./assets/offset_comp_572394.png");
 	background-repeat: no-repeat;
 	width: 19.532%;
-	height: 306px;
-	padding: 24px 20px;
+	height: max-content;
+}
+
+.top-section {
+	padding: 24px 20px 0px;
 }
 
 .mobile-container {
@@ -44,7 +48,7 @@ body {
 .header {
 	font-weight: 900;
 	font-size: 32px;
-	background-color: var(--ternary--color);
+	background-color: var(--light-green--color);
 	color: white;
 	width: fit-content;
 }
@@ -58,7 +62,122 @@ body {
 
 .searchBar,
 input::placeholder {
-	color: var(--primary-color);
+	color: var(--dark-green-color);
 	font-size: 16px;
 	font-weight: 500;
+	border: none;
+}
+
+.searchBar,
+input:focus::placeholder {
+	color: var(--grey-color);
+	font-size: 16px;
+	font-weight: 500;
+	border: none;
+	caret-color: var(--dark-green-color);
+}
+
+.cardView {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 18px;
+	box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+	transition: all 0.5s ease-in-out;
+	padding: 20px 30px;
+}
+
+.sponsors {
+	color: var(--dark-green-color);
+	font-size: 12px;
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.sponsors,
+img {
+	margin-top: 10px;
+}
+
+.subHeading {
+	font-size: 24px;
+	font-weight: 900;
+	color: var(--dark-green-color);
+	margin-bottom: 20px;
+}
+
+.searchIcon {
+	background: var(--yellow-color);
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	top: 243px;
+	left: 56.4%;
+	padding: 8px 10px;
+	border-radius: 5px;
+}
+
+.searchIcon,
+i {
+	color: var(--dark-green-color);
+}
+
+.viewButton {
+	height: 48px;
+	color: white;
+	background-color: var(--dark-green-color);
+	border-radius: 7px;
+	border: none;
+	font-size: 18px;
+	margin-top: 30px;
+}
+
+.carousalImage {
+	height: 181px;
+	border-radius: 18px;
+	background-image: url("./assets/Group\ 679.png");
+}
+
+.carousalBody {
+	padding: 6px 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.carousal-title {
+	display: flex;
+	justify-content: space-between;
+	font-size: 10px;
+	margin-top: 13px;
+	font-weight: 600;
+	color: var(--dark-green-color);
+}
+
+.carousal-rightTitle {
+	font-size: 12px;
+}
+
+.carousal-rightTitle,
+p {
+	margin-right: 5px;
+}
+
+.carName {
+	color: var(--dark-green-color);
+	font-weight: 700;
+	font-size: 20;
+	display: block;
+	margin-top: 5px;
+}
+
+.rate {
+	color: var(--dark-green-color);
+	font-weight: 700;
+	font-size: 18;
+	display: block;
+	margin-top: 5px;
 }
