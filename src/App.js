@@ -10,6 +10,8 @@ import user from "./assets/user-circle-solid.svg";
 import down from "./assets/round-keyboard_arrow_down-24px.svg";
 import flex from "./assets/Group 2363.svg";
 import like from "./assets/Group 191.svg";
+import whatsapp from "./assets/whatsapp-brands.svg";
+import phone from "./assets/logo.svg";
 
 class App extends React.Component {
 	constructor(props) {
@@ -22,7 +24,25 @@ class App extends React.Component {
 		let { onActive } = this.state;
 		return (
 			<div className={"mobile-container"}>
-				<div className={"main-content"}>
+				<div className={"second-content"}>
+					{/* {/* <div className={"main-content"}>
+					<div className={"d-flex logo-active"}>
+						<div>
+							<img src={masterImage} />
+						</div>
+						<input placeholder={"search your car"} className={"header-input"} />
+						<div className={"header-search"}>
+							<i class="fa fa-search"></i>
+						</div>
+						<div style={{}} className={"rightLogo"}>
+							<img src={user} />
+							<img style={{ marginLeft: "5px" }} src={down} />
+						</div>
+					</div>
+					<div className={"menuItems"}>
+						<i class="fas fa-phone header-icon"></i>
+						<i class="fab fa-whatsapp header-icon"></i>
+					</div> 
 					<div className={"top-section"}>
 						<div className={"d-flex logo"}>
 							<div>
@@ -33,6 +53,7 @@ class App extends React.Component {
 								<img style={{ marginLeft: "5px" }} src={down} />
 							</div>
 						</div>
+
 						<div className={"header"}>Rent your</div>
 						<br />
 						<div style={{ marginBottom: "10px" }} className={"header"}>
@@ -72,49 +93,96 @@ class App extends React.Component {
 						</div>
 						<h4 className={"subHeading"}>Featured cars</h4>
 
-						<div>
-							<div className={"carousalImage"}>
-								<div className={"carousalBody"}>
-									<img src={flex} />
-									<img src={like} />
+						<div className={"horizontal-scroll-wrapper"}>
+							<div className={"tile"}>
+								<div className={"carousalImage"}>
+									<div className={"carousalBody"}>
+										<img src={flex} />
+										<img src={like} />
+									</div>
 								</div>
-							</div>
-							<div className={"carousal-title"}>
-								<div>
-									<p>Chuan Do Tan’s</p>
+								<div className={"carousal-title"}>
+									<div>
+										<p>Chuan Do Tan’s</p>
+									</div>
+									<div className={"d-flex carousal-rightTitle"}>
+										<i style={{ marginRight: "3px" }} class="fa fa-star" />
+										<p>4.89</p>
+										<label style={{ fontWeight: "500" }}>123 trips</label>
+									</div>
 								</div>
-								<div className={"d-flex carousal-rightTitle"}>
-									<i style={{ marginRight: "3px" }} class="fa fa-star" />
-									<p>4.89</p>
-									<label style={{ fontWeight: "500" }}>123 trips</label>
-								</div>
-							</div>
-							<label className={"carName"}>Car brand name</label>
+								<label className={"carName"}>Car brand name</label>
 
-							<label className={"rate"}>$75 / day</label>
+								<label className={"rate"}>$75 / day</label>
+							</div>
+
+							<div className={"tile"}>
+								<div className={"carousalImage"}>
+									<div className={"carousalBody"}>
+										<img src={flex} />
+										<img src={like} />
+									</div>
+								</div>
+								<div className={"carousal-title"}>
+									<div>
+										<p>Chuan Do Tan’s</p>
+									</div>
+									<div className={"d-flex carousal-rightTitle"}>
+										<i style={{ marginRight: "3px" }} class="fa fa-star" />
+										<p>4.89</p>
+										<label style={{ fontWeight: "500" }}>123 trips</label>
+									</div>
+								</div>
+								<label className={"carName"}>Car brand name</label>
+
+								<label className={"rate"}>$75 / day</label>
+							</div>
 						</div>
 
 						<button className={"viewButton"}>View all Cars</button>
 					</div>
+				</div> */}
+
+					<div className={"backArrow"}>
+						<i
+							style={{ fontSize: "18px", marginRight: "20px" }}
+							class="fas fa-arrow-left"></i>
+						Search
+					</div>
+					<div className={"pillContainer"}>
+						<div className={"pill-active"}>Daily</div>
+						<div className={"pill"}>Hourly</div>
+						<div className={"pill"}>Long Term</div>
+					</div>
+
+					<div className={"border-box"}>
+						<label>Pickup Location</label>
+						<input placeholder={"Enter your location"} />
+					</div>
+					<div className={"date"}>
+						<div className={"border-box"}>
+							<label>Pickup Date</label>
+							<input placeholder={"Select Date"} />
+						</div>
+						<div className={"border-box"}>
+							<label>Pickup Time</label>
+							<input placeholder={"Select Time"} />
+						</div>
+					</div>
+					<div className={"date"}>
+						<div className={"border-box"}>
+							<label>Dropoff Date</label>
+							<input placeholder={"Select Date"} />
+						</div>
+						<div className={"border-box"}>
+							<label>Dropoff Time</label>
+							<input placeholder={"Select Time"} />
+						</div>
+					</div>
+					<div>
+						<button className={"searchButton"}>Search</button>
+					</div>
 				</div>
-				{/* 
-			<div className={"backArrow"}>Search</div>
-			<div className={"pills"}>
-				<div>Daily</div>
-				<div>Hourly</div>
-				<div>Long Term</div>
-			</div>
-			<div className={"location-search"}>
-				<input />
-			</div>
-			<div className={"date"}>
-				<input />
-				<input />
-			</div>
-			<div className={"time"}>
-				<input />
-				<input />
-			</div><div><Button>SEARCH</Button></div> */}
 			</div>
 		);
 	}
