@@ -139,6 +139,7 @@ input::placeholder {
 .header label {
 	font-family: "Museo Sans Rounded 900";
 	font-size: 32px;
+	font-weight: 900;
 	line-height: 0;
 }
 
