@@ -1,5 +1,6 @@
 import React from "react";
 
+//functional/stateless component
 const Second = (props) => {
 	return (
 		<div className={"second-content"}>

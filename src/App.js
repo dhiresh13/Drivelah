@@ -8,6 +8,8 @@ import flex from "./assets/images/Group 2363.svg";
 import like from "./assets/images/Group 191.svg";
 
 import Second from "./secondPage";
+
+//Stateful component
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -16,7 +18,7 @@ class App extends React.Component {
 			onSearch: false,
 			showMenu: false,
 		};
-
+		//Flag to show second screen
 		this.onSearch = () => {
 			let { onSearch } = this.state;
 			onSearch = !onSearch;
@@ -30,9 +32,9 @@ class App extends React.Component {
 		console.log(this.state);
 		return (
 			<div className={"mobile-container"}>
-				{!onSearch ? (
+				{!onSearch ? ( //Flag to set second screen
 					<div className={"main-content"}>
-						{showMenu ? (
+						{showMenu ? ( //Menu flag
 							<>
 								<div className={"d-flex logo-active"}>
 									<div>
@@ -164,7 +166,7 @@ class App extends React.Component {
 						</div>
 					</div>
 				) : (
-					<Second onSearch={this.onSearch} />
+					<Second onSearch={this.onSearch} /> //Second Screen Component
 				)}
 			</div>
 		);
