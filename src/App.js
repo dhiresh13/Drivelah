@@ -35,7 +35,7 @@ class App extends React.Component {
 				{!onSearch ? ( //Flag to set second screen
 					<div className={"main-content"}>
 						{showMenu ? ( //Menu flag
-							<>
+							<div style={{ height: "120px" }}>
 								<div className={"d-flex logo-active"}>
 									<div>
 										<img src={masterImage} />
@@ -61,13 +61,16 @@ class App extends React.Component {
 									<i class="fas fa-phone header-icon"></i>
 									<i class="fab fa-whatsapp header-icon"></i>
 								</div>
-							</>
+							</div>
 						) : (
-							<div className={"d-flex logo padding"}>
+							<div
+								style={{ height: "120px" }}
+								className={"d-flex logo padding"}>
 								<div>
 									<img src={masterImage} />
 								</div>
 								<div
+									style={!showMenu ? { marginTop: "-60px" } : ""}
 									onClick={() => this.setState({ showMenu: !showMenu })}
 									className={"rightLogo"}>
 									<img src={user} />
